@@ -1,5 +1,6 @@
 package Main;
 
+import java.lang.Integer;
 import java.util.Scanner;
 import java.util.Random;
 import i.o.Cadastro;
@@ -60,22 +61,22 @@ public class Main {
 
                 System.out.println("Descrição:");
                 Descricao=x.nextLine();
-                movie.SetElenco(Descricao);
+                movie.SetDescricao(Descricao);
                 Desc.add(movie.GetElenco());
 
                 System.out.println("Gênero:");
                 Genero=x.nextLine();
-                movie.SetElenco(Genero);
+                movie.SetGenero(Genero);
                 Ge.add(movie.GetElenco());
 
                 System.out.println("Diretor:");
                 Diretor=x.nextLine();
-                movie.SetElenco(Diretor);
+                movie.SetDiretor(Diretor);
                 Di.add(movie.GetElenco());
 
                 System.out.println("Streaming:");
-                Plataforma = x.nextLine();
-                movie.SetElenco(Plataforma);
+                Plataforma =x.nextLine();
+                movie.SetPlataforma(Plataforma);
                 Plat.add(movie.GetPlataforma());
 
             }
@@ -225,9 +226,11 @@ Random(random,Tipo,titulo,Faixa,Elen,Desc,Ge,Di,Plat,x);
         }else if(choose==6) {
 
             System.out.println("\nClassificação indicativa que está procurando:");
-          int Ler=x.nextInt();
+          int Ler6=x.nextInt();
+
+
             for(int i=0; i<Faixa.size();i++) {
-                if(Faixa.equals(Ler)) {
+                if(Faixa.contains(Ler6)){
                     System.out.println("---------------Resultado da sua Pesquisa---------------");
                     System.out.println(Tipo.get(i));
                     System.out.println("TÍTULO:"+Titulo.get(i)+"\n");
@@ -239,8 +242,8 @@ Random(random,Tipo,titulo,Faixa,Elen,Desc,Ge,Di,Plat,x);
                     System.out.println("Streaming:"+Plat.get(i)+"\n");
                     System.out.println("-------------------------------------------------------");
 
-                }
-            }}else if(choose==7) {
+                }}
+            }else if(choose==7) {
             String Ler7;
             System.out.println("\nStreaming que está procurando:");
             Ler7=x.nextLine();
