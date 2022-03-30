@@ -2,14 +2,14 @@ package i.o;
 
 import java.util.Objects;
 
-public class Cadastro2 {
+public class Cadastro2<Var> {
     private String Tipo;
     private String Titulo;
     private String Elenco;
     private String Descricao;
     private String Genero;
     private String Diretor;
-    private int Classificacao;
+    private Var Classificacao;
     private String Streaming;
 
     public String GetTipo() {
@@ -60,11 +60,11 @@ public class Cadastro2 {
         Diretor = diretor;
     }
 
-    public int GetIdade() {
+    public Var GetIdade() {
         return Classificacao;
     }
 
-    public void SetIdade(int classificacao) {
+    public void SetIdade(Var classificacao) {
         Classificacao = classificacao;
     }
 
