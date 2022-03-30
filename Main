@@ -62,17 +62,17 @@ public class Main {
                 System.out.println("Descrição:");
                 Descricao=x.nextLine();
                 movie.SetDescricao(Descricao);
-                Desc.add(movie.GetElenco());
+                Desc.add(movie.GetDescricao());
 
                 System.out.println("Gênero:");
                 Genero=x.nextLine();
                 movie.SetGenero(Genero);
-                Ge.add(movie.GetElenco());
+                Ge.add(movie.GetGenero());
 
                 System.out.println("Diretor:");
                 Diretor=x.nextLine();
                 movie.SetDiretor(Diretor);
-                Di.add(movie.GetElenco());
+                Di.add(movie.GetDiretor());
 
                 System.out.println("Streaming:");
                 Plataforma =x.nextLine();
@@ -127,9 +127,8 @@ Random(random,Tipo,titulo,Faixa,Elen,Desc,Ge,Di,Plat,x);
         System.out.println("3-Elenco");
         System.out.println("4-Descrição");
         System.out.println("5-Gênero");
-        System.out.println("6-Classificação Indicativa");
-        System.out.println("7-Site");
-        System.out.println("8-Diretor");
+        System.out.println("6-Site");
+        System.out.println("7-Diretor");
         choose=Leitor(x);
         if(choose==1) {
             String Ler;
@@ -222,28 +221,7 @@ Random(random,Tipo,titulo,Faixa,Elen,Desc,Ge,Di,Plat,x);
                 }
 
             }
-
-        }else if(choose==6) {
-
-            System.out.println("\nClassificação indicativa que está procurando:");
-          int Ler6=x.nextInt();
-
-
-            for(int i=0; i<Faixa.size();i++) {
-                if(Faixa.contains(Ler6)){
-                    System.out.println("---------------Resultado da sua Pesquisa---------------");
-                    System.out.println(Tipo.get(i));
-                    System.out.println("TÍTULO:"+Titulo.get(i)+"\n");
-                    System.out.println("Classificação Indicativa:"+Faixa.get(i)+"\n");
-                    System.out.println("Elenco:"+Elen.get(i)+"\n");
-                    System.out.println("Descrição:"+Desc.get(i)+"\n");
-                    System.out.println("Gênero:"+Ge.get(i)+"\n");
-                    System.out.println("Diretor:"+Di.get(i)+"\n");
-                    System.out.println("Streaming:"+Plat.get(i)+"\n");
-                    System.out.println("-------------------------------------------------------");
-
-                }}
-            }else if(choose==7) {
+            }else if(choose==6) {
             String Ler7;
             System.out.println("\nStreaming que está procurando:");
             Ler7=x.nextLine();
@@ -262,7 +240,7 @@ Random(random,Tipo,titulo,Faixa,Elen,Desc,Ge,Di,Plat,x);
 
                 }
 
-            }}else if(choose==8) {
+            }}else if(choose==7) {
             String Ler8;
             System.out.println("\nDiretor que está procurando:");
             Ler8=x.nextLine();
@@ -317,9 +295,9 @@ public static void Random(Random random,ArrayList Tipo,ArrayList Titulo,ArrayLis
             System.out.println("Streaming:"+Plat.get(a)+"\n");
             System.out.println("-------------------------------------------------------");
 
-        }}
+    }
 
-        }
+        }}
     else{
     System.out.println("Não Possui Filmes Cadastrados");}
 }
@@ -329,3 +307,4 @@ public static void Random(Random random,ArrayList Tipo,ArrayList Titulo,ArrayLis
         x.nextLine();
         return aux;
     }}
+
