@@ -1,6 +1,6 @@
 package Main;
 
-import java.lang.Integer;
+
 import java.util.Scanner;
 import java.util.Random;
 import i.o.Cadastro;
@@ -307,4 +307,3 @@ public static void Random(Random random,ArrayList Tipo,ArrayList Titulo,ArrayLis
         x.nextLine();
         return aux;
     }}
-
